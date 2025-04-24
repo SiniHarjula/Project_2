@@ -1,0 +1,149 @@
+body{
+  font-family: 'Inter', sans-serif;
+  background-color: black;
+  font-weight: 500;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 300%;
+  color: white;
+}
+
+#theatreSelect,
+#theatreInput {
+  background-color: #616161;
+  color: white;
+}
+
+#theatreSelect {
+  width: 250px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  transition: 0.4s;
+  margin-bottom: 15px;
+}
+
+#theatreInput {
+  width: 250px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  transition: 0.4s;
+  margin-bottom: 8px;
+}
+
+#theatreInput::placeholder {
+  color: white;
+  opacity: 0.8; 
+}
+
+#theatreInput:hover {
+  box-shadow: 0 0 10px #10ddd6, 
+  0 0 15px #10ddd6, 
+  0 0 20px #10ddd6;
+}
+
+#theatreSelect:hover {
+  box-shadow: 0 0 10px #10ddd6, 
+  0 0 15px #10ddd6, 
+  0 0 20px #10ddd6;
+}
+
+#searchButton {
+  width: 150px;
+  padding: 13px;
+  margin-top: 3px;
+  font-size: 15px;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.4s;
+  margin-bottom: 20px;
+}
+
+#searchButton:hover{
+  box-shadow: 0 0 10px #10ddd6, 
+              0 0 15px #10ddd6, 
+              0 0 20px #10ddd6;
+}
+
+#theatreSelectMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  gap: 5px;
+  color: white;
+  font-size: 18px;
+}
+
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  justify-content: center;
+}
+
+.movie-card {
+  position: relative;
+  width: 300px; 
+  height: 450px; 
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.movie-card .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px; 
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  box-sizing: border-box;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  text-align: center;
+  font-size: 1.1rem; 
+  line-height: 1.4;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35), 
+            0 0 10px #10ddd6, 
+            0 0 20px #10ddd6, 
+            0 0 30px #10ddd6;
+}
+
+.movie-card .overlay h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.4rem;
+}
+
+.movie-card:hover .overlay {
+  transform: translateY(0);
+}
+
+@media (max-width: 500px) {
+  #theatreSelect, #theatreInput, #searchButton {
+    width: 90%;
+  }
+  .movie-card {
+    width: 90%;
+    height: auto;
+  }
+}
